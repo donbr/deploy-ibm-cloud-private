@@ -5,7 +5,8 @@
 
 # Software License Terms Acceptence (see https://hub.docker.com/r/ibmcom/icp-inception/)
 # If you accept the Software license terms please change the value below to 'accept'
-license = "not accepted"
+#license = "not accepted"
+license = "accept"
 
 # most laptops have at least 8 cores nowadays (adjust based on your laptop hardware)
 cpus = '4'
@@ -17,6 +18,7 @@ cpus = '4'
 # use this setting for better performance if you have the ram available on your laptop
 # uncomment the below line and comment out the above line "#memory = '4096'"
 memory = '10240'
+#memory = '8192'
 
 # Update version to pull a specific version i.e. version = '2.1.0-beta-1'
 version = "2.1.0.3"
@@ -25,7 +27,7 @@ version = "2.1.0.3"
 # on some systems this network segment may overlap another network already on your
 # system. In those cases you will need to change this value to another value
 # i.e. 192.168.56 or 192.168.16 etc...
-base_segment = '192.168.27'
+base_segment = '192.168.56'
 
 # enable/disable cluster federation
 federation_enabled = 'false'
@@ -44,13 +46,13 @@ disabled_management_services = '["istio", "vulnerability-advisor", "custom-metri
 
 # use apt-cacher-ng & docker registry cache servers
 # see instructions in the `README.md` under #Advanced Cache Setup
-use_cache = 'false'
-cache_host = '192.168.27.99'
+use_cache = 'true'
+cache_host = '192.168.56.99'
 apt_cache_port = '3142'
 docker_registry_port = '5000'
 helm_version = '2.6.0'
 k8s_version = '1.8.3'
-etcd_version = '3.1.5'
+etcd_version = '3.2.14'
 
 ###############################################################################
 #                  DO NOT MODIFY ANYTHING BELOW THIS POINT                    #

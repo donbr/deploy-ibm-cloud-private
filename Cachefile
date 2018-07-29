@@ -25,7 +25,7 @@ memory = '512'
 # on some systems this network segment may overlap another network already on your
 # system. In those cases you will need to change this value to another value
 # i.e. 192.168.56 or 192.168.16 etc...
-base_segment = '192.168.27'
+base_segment = '192.168.56'
 
 vm_name = "ICP-Cache-Server"
 user_home_path = ENV['HOME']
@@ -236,7 +236,8 @@ Vagrant.configure(2) do |config|
 
   config.vm.define "icp_cache" do |icp_cache|
     icp_cache.vm.box = "bento/ubuntu-16.04"
-    icp_cache.vm.box_version = "201708.22.0"
+    # icp_cache.vm.box_version = "201708.22.0"
+    icp_cache.vm.box_version = "201806.08.0"
     icp_cache.vm.hostname = "cache.icp"
     icp_cache.vm.box_check_update = false
     icp_cache.vm.network "private_network", ip: "#{base_segment}.99", adapter_ip: "#{base_segment}.1", netmask: "255.255.255.0", auto_config: true
