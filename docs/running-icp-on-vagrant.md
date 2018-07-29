@@ -50,7 +50,7 @@ To **resume** the ICP server up again after **suspend**:
 vagrant resume
 ```
 
-To reset the ICP server after failed installation or resume
+To reset the ICP server after failed installation or failed resume attempt:
 ```bash
 vagrant destroy
 vagrant up
