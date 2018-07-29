@@ -55,7 +55,7 @@ vagrant destroy
 vagrant up
 ```
 
-### Cache Server - stop last / start last
+### Cache Server - stop last / start first
 
 To shutdown the cache server use **halt**:
 ```bash
