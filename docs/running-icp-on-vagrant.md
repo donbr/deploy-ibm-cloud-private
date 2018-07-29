@@ -1,13 +1,13 @@
-# Running IBM Cloud Private using Vagrant
+# Running IBM Cloud Private locally using Vagrant
 
 ## Installation Notes
 * refer to [deploy-vagrant.md](./deploy-vagrant.md) for detailed instructions
   * took much longer than the 20-30 minutes suggested for the install on my Mac
   * I recommend using a utility _like_ [caffeinate](https://discussions.apple.com/thread/7858428) on the Mac to prevent the computer from going to sleep during the long install process
   * worked more reliably using an alternate network `base_segment` parameter
-* I found the install and resume processes to be unreliable so I went with the cache server option with the install
-  * prepare yourself to run `vagrant destroy` and `vagrant up` more than once for the core ICP installation **AND** after failed resume attempts
-  * start-up and resume of the **LXC** `cfc-manager` instance is the least reliable
+* I found the install and resume processes to be unreliable so I went with the cache server option
+  * prepare yourself to run `vagrant destroy` and `vagrant up` more than once for the core ICP installation and after failed resume attempts
+  * start-up and resume of the **LXC** `cfc-manager` instance is the least reliable - when and how it's used is also not clear to me
 
 
 ### Changed Vagrantfile parameters
